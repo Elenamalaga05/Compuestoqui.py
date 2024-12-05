@@ -1,4 +1,4 @@
-from chemlib import Compound
+   from chemlib import Compound
 
 # Crear un compuesto con su fórmula
 compuesto = Compound("H2O")  # Agua
@@ -13,7 +13,7 @@ for elemento, porcentaje in compuesto.mass_fraction().items():
 
 
 
-from chemlib import Compound
+    from chemlib import Compound
 
 # Crear un compuesto
 compuesto = Compound("C6H12O6")  # Glucosa
@@ -24,7 +24,7 @@ print(f"La masa molar de {compuesto.formula} es: {compuesto.molar_mass()} g/mol"
 
 
 
-from chemlib import Compound
+    from chemlib import Compound
 
 # Crear un compuesto
 compuesto = Compound("NaCl")  # Sal común
@@ -37,7 +37,7 @@ for elemento, porcentaje in compuesto.mass_fraction().items():
 
 
 
-from chemlib import Reaction
+   from chemlib import Reaction
 
 # Definir una reacción química
 reaccion = Reaction({"H2": 2, "O2": 1}, {"H2O": 2})  # 2H2 + O2 -> 2H2O
