@@ -1,10 +1,54 @@
 from chemlib import Compound
 
-compuesto = Compound("H2O")  
+# Crear un compuesto con su fórmula
+compuesto = Compound("H2O")  # Agua
 
-
+# Información del compuesto
 print("Fórmula molecular:", compuesto.formula)
 print("Masa molar:", compuesto.molar_mass(), "g/mol")
 print("Porcentaje en masa:")
 for elemento, porcentaje in compuesto.mass_fraction().items():
+    print(f"{elemento}: {porcentaje * 100:.2f}%") 
+
+
+
+
+from chemlib import Compound
+
+# Crear un compuesto
+compuesto = Compound("C6H12O6")  # Glucosa
+
+# Calcular la masa molar
+print(f"La masa molar de {compuesto.formula} es: {compuesto.molar_mass()} g/mol") 
+
+
+
+
+from chemlib import Compound
+
+# Crear un compuesto
+compuesto = Compound("NaCl")  # Sal común
+
+# Calcular composición porcentual
+print("Composición porcentual en masa de NaCl:")
+for elemento, porcentaje in compuesto.mass_fraction().items():
     print(f"{elemento}: {porcentaje * 100:.2f}%")
+
+
+
+
+from chemlib import Reaction
+
+# Definir una reacción química
+reaccion = Reaction({"H2": 2, "O2": 1}, {"H2O": 2})  # 2H2 + O2 -> 2H2O
+
+# Balancear la ecuación y mostrar resultados
+reaccion.balance()
+print("Ecuación balanceada:")
+print(reaccion.formula)
+
+# Calcular la cantidad de producto (agua) a partir de reactantes
+resultados = reaccion.get_amounts({"H2": 4, "O2": 2})
+print("\nCantidades en moles:")
+for compuesto, moles in resultados.items():
+    print(f"{compuesto}: {moles} mol")
