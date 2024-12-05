@@ -1,0 +1,10 @@
+
+from chemlib import Reaction
+
+# Crear una reacción química sin balancear
+reaccion = Reaction({"C3H8": 1, "O2": 5}, {"CO2": 3, "H2O": 4})  # Propano + Oxígeno -> Dióxido de carbono + Agua
+
+# Balancear y mostrar la reacción
+reaccion.balance()
+print("Reacción balanceada:")
+print(reaccion.formula)
