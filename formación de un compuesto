@@ -1,0 +1,10 @@
+from chemlib import Compound
+
+compuesto = Compound("H2O")  
+
+
+print("Fórmula molecular:", compuesto.formula)
+print("Masa molar:", compuesto.molar_mass(), "g/mol")
+print("Porcentaje en masa:")
+for elemento, porcentaje in compuesto.mass_fraction().items():
+    print(f"{elemento}: {porcentaje * 100:.2f}%")
